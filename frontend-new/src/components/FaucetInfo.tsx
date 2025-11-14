@@ -36,9 +36,9 @@ export function FaucetInfo() {
           <div className="bg-black/30 rounded-lg p-3">
             <p className="font-bold mb-2 text-blue-400">Method 2: cURL</p>
             <code className="text-xs bg-gray-900 p-2 rounded block overflow-x-auto">
-              curl -X POST https://faucet-testnet.onelabs.cc/v1/gas \<br/>
-              -H "Content-Type: application/json" \<br/>
-              -d '{"{'}"FixedAmountRequest": {"{"}"recipient": "YOUR_ADDRESS"{"}"}{"}"}'
+              curl -X POST https://faucet-testnet.onelabs.cc/v1/gas<br/>
+              -H &quot;Content-Type: application/json&quot;<br/>
+              -d &apos;&#123;&quot;FixedAmountRequest&quot;: &#123;&quot;recipient&quot;: &quot;YOUR_ADDRESS&quot;&#125;&#125;&apos;
             </code>
           </div>
 
