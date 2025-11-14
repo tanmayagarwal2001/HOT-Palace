@@ -241,7 +241,9 @@ export class ReplayAttackDetector {
     // Prevent memory leak
     if (this.usedNonces.size > this.MAX_NONCES) {
       const firstNonce = this.usedNonces.values().next().value;
-      this.usedNonces.delete(firstNonce);
+      if (firstNonce) {
+        this.usedNonces.delete(firstNonce);
+      }
     }
     
     return true;
