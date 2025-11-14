@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useCurrentAccount, useSignAndExecuteTransaction } from '@mysten/dapp-kit';
-import { Transaction } from '@mysten/sui/transactions';
+import { Transaction as SuiTransaction } from '@mysten/sui/transactions';
 import { ONECHAIN_CONFIG } from '@/config/constants';
 import { WalletConnect } from '@/components/WalletConnect';
 
@@ -22,7 +22,7 @@ export default function AdminPage() {
     setResult(null);
 
     try {
-      const tx = new Transaction();
+      const tx = new SuiTransaction();
       const amount = Math.floor(parseFloat(topUpAmount) * 100_000_000);
       
       const [coin] = tx.splitCoins(tx.gas, [amount]);
@@ -37,7 +37,7 @@ export default function AdminPage() {
       });
 
       signAndExecute(
-        { transaction: tx },
+        { transaction: tx as any },
         {
           onSuccess: () => {
             setResult('Top-up successful!');
@@ -62,7 +62,7 @@ export default function AdminPage() {
     setResult(null);
 
     try {
-      const tx = new Transaction();
+      const tx = new SuiTransaction();
       const amount = Math.floor(parseFloat(withdrawAmount) * 100_000_000);
 
       tx.moveCall({
@@ -75,7 +75,7 @@ export default function AdminPage() {
       });
 
       signAndExecute(
-        { transaction: tx },
+        { transaction: tx as any },
         {
           onSuccess: () => {
             setResult('Withdrawal successful!');
