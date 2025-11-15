@@ -1,6 +1,6 @@
 # HOT Palace - OneChain Edition
 
-A decentralized coin flip betting game built on **OneChain blockchain** with **Move smart contracts** and **Next.js 15**.
+A decentralized coin flip betting game built on **OneChain blockchain** with **Move smart contracts** and **Next.js 15**...
 
 ## 🎮 Live Demo
 
