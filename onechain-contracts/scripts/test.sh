@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#h
 # Test the Move contract
 
 echo "🧪 Testing Head or Tail Game contract..."
